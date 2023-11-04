@@ -1,13 +1,4 @@
-<!DOCTYPE html>
-<html lang="en">
-  <head>
-    <meta charset="UTF-8" />
-    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <link rel="stylesheet" href="/assets/style.css" />
-    <title>Document</title>
-    <style>
-      body {
+body {
     background-image: url(/assets/images/bg.jpg);    
     font-family: 'Asap', sans-serif;
   }
@@ -103,19 +94,3 @@
     font-size: 12px;
   }
  
-    </style>
-  </head>
-  <body>
-    <form method="POST" action="logincheck.php" class="login">
-        <label for="username">Username</label>
-        <input type="text" name="username" />
-        <label for="password">Password</label>
-        <input type="password" name="password" />
-        <button type="submit ">Login</button>
-      </form>
-      
-      
-    <script src="/assets/script.js"></script>
-  </body>
-</html>
-
