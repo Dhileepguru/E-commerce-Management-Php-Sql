@@ -39,6 +39,22 @@ if(!isset($_POST['submit']))
         #logoutButton{
             margin-left:5px;
         }
+        .welcome{
+            margin-left:600px;
+            text-align:center;
+        }
+        .card-img-top{
+          width:100%;
+          height:300px;
+          object-fit:contain;
+        }
+        .bg-grey{
+          background-color:green;
+        }
+        .col-md-2{
+          background-color:lightgreen;
+          margin-bottom:10px;
+        }
 
     </style>
     
@@ -47,7 +63,7 @@ if(!isset($_POST['submit']))
 </head>
 <body>
 <!-- nav -->
-<div class="container-fluid p-0">
+<div class="container-fluid p-0 ">
 <nav class="navbar navbar-expand-lg bg-body-tertiary">
   <div class="container-fluid">
     <img src="./assets/images/logo2.jpg" alt="alt" class="logo">
@@ -74,12 +90,157 @@ if(!isset($_POST['submit']))
       <form class="d-flex" role="search">
         <input class="form-control me-2" type="search" placeholder="Search" aria-label="Search">
         <button class="btn btn-outline-success" type="submit">Search</button>
-        <button  class="btn btn-outline-warning" id="logoutButton">Logout</button>
+        
 
       </form>
+      <button  class="btn btn-outline-warning" id="logoutButton">Logout</button>
     </div>
   </div>
 </nav>
+    </div>
+
+    <!--below nav-->
+    <nav class="navbar navbar-expand-lg navbar-dark bg-success">
+        <ul class="navbar-nav me-auto">
+        <li class="nav-item">
+            <a class="nav-link welcome"  href="#"><h2>Welcome to Shopify</h2></a> 
+        <li>
+      </ul>
+      </nav>
+      <br>
+    <!-- product-list -->
+    <div class="row">
+        <div class="col-md-10">
+          <div class="row">
+          <div class="col-md-4 mb-2">
+          <div class="card">
+              <img src="./assets/images/shoe1.jpg" class="card-img-top" alt="...">
+              <div class="card-body">
+                <h5 class="card-title">Card title</h5>
+                <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
+                <a href="#" class="btn btn-success">Add to Cart</a>
+                <a href="#" class="btn btn-primary">View More</a>
+              </div>
+            </div>
+          </div>
+          <div class="col-md-4 mb-2">
+          <div class="card">
+            <img src="./assets/images/shoe2.jpg" class="card-img-top" alt="...">
+            <div class="card-body">
+              <h5 class="card-title">Card title</h5>
+              <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
+              <a href="#" class="btn btn-success">Add to Cart</a>
+              <a href="#" class="btn btn-primary">View More</a>
+            </div>
+          </div>
+          </div>
+          <div class="col-md-4 mb-2">
+          <div class="card">
+              <img src="./assets/images/shoe3.jpg" class="card-img-top" alt="...">
+              <div class="card-body">
+                <h5 class="card-title">Card title</h5>
+                <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
+                <a href="#" class="btn btn-success">Add to Cart</a>
+                <a href="#" class="btn btn-primary">View More</a>
+              </div>
+            </div>
+          </div>
+          <div class="col-md-4 mb-2">
+          <div class="card">
+              <img src="./assets/images/shoe4.jpg" class="card-img-top" alt="...">
+              <div class="card-body">
+                <h5 class="card-title">Card title</h5>
+                <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
+                <a href="#" class="btn btn-success">Add to Cart</a>
+                <a href="#" class="btn btn-primary">View More</a>
+              </div>
+            </div>
+          </div>
+          <div class="col-md-4 mb-2">
+          <div class="card">
+              <img src="./assets/images/shoe5.jpg" class="card-img-top" alt="...">
+              <div class="card-body">
+                <h5 class="card-title">Card title</h5>
+                <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
+                <a href="#" class="btn btn-success">Add to Cart</a>
+                <a href="#" class="btn btn-primary">View More</a>
+              </div>
+            </div>
+          </div>
+          <div class="col-md-4 mb-2">
+          <div class="card">
+              <img src="./assets/images/shoe6.jpg" class="card-img-top" alt="...">
+              <div class="card-body">
+                <h5 class="card-title">Card title</h5>
+                <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
+                <a href="#" class="btn btn-success">Add to Cart</a>
+                <a href="#" class="btn btn-primary">View More</a>
+              </div>
+            </div>
+          </div>
+          <div class="col-md-4 mb-2">
+          <div class="card">
+              <img src="./assets/images/shoe7.jpg" class="card-img-top" alt="...">
+              <div class="card-body">
+                <h5 class="card-title">Card title</h5>
+                <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
+                <a href="#" class="btn btn-success">Add to Cart</a>
+                <a href="#" class="btn btn-primary">View More</a>
+              </div>
+            </div>
+          </div>
+          <div class="col-md-4 mb-2">
+          <div class="card">
+              <img src="./assets/images/shoe8.jpg" class="card-img-top" alt="...">
+              <div class="card-body">
+                <h5 class="card-title">Card title</h5>
+                <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
+                <a href="#" class="btn btn-success">Add to Cart</a>
+                <a href="#" class="btn btn-primary">View More</a>
+              </div>
+            </div>
+          </div>
+          <div class="col-md-4 mb-2">
+          <div class="card">
+              <img src="./assets/images/shoe9.jpg" class="card-img-top" alt="...">
+              <div class="card-body">
+                <h5 class="card-title">Card title</h5>
+                <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
+                <a href="#" class="btn btn-success">Add to Cart</a>
+                <a href="#" class="btn btn-primary">View More</a>
+              </div>
+            </div>
+          </div>
+          </div>
+        </div>
+        
+        <div class="col-md-2">
+          <div class="col-md-2  p-0">
+            <ul class="navbar-nav me-auto text-center">
+              <li class="nav-item bg-primary products"></li>
+              <a href="#" class="nav-link text-dark"><h2>Products</h2></a>
+              <li class="nav-item  products"></li>
+              <a href="#" class="nav-link text-light"><h2>Shoes</h2></a>
+              <li class="nav-item  products"></li>
+              <a href="#" class="nav-link text-light"><h2>Slippers</h2></a>
+            </ul>
+            <ul class="navbar-nav me-auto text-center">
+              <li class="nav-item bg-primary products"></li>
+              <a href="#" class="nav-link text-dark"><h2>Categories</h2></a>
+              <li class="nav-item  products"></li>
+              <a href="#" class="nav-link text-light"><h2>nike</h2></a>
+              <li class="nav-item  products"></li>
+              <a href="#" class="nav-link text-light"><h2>puma</h2></a>
+              
+            </ul>
+          </div>
+
+
+
+
+
+        </div>
+
     </div>
     
 
@@ -113,10 +274,10 @@ if(!isset($_POST['submit']))
 
 
 
-
+  
     <div class="bg-grey p-3 text-center">
         <p> All Rights Reserved © Copyright Designed by Dhileep-2023</p>
-
+  
     <script>
         
         const logoutButton = document.getElementById('logoutButton');
