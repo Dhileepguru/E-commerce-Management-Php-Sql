@@ -1,4 +1,6 @@
-
+<?php
+  include('connect.php');
+?>
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -198,21 +200,41 @@
           <div class="col-md-2  p-0">
             <ul class="navbar-nav me-auto text-center">
               <li class="nav-item bg-primary products"></li>
-              <a href="#" class="nav-link text-dark"><h2>Products</h2></a>
-              <li class="nav-item  products"></li>
-              <a href="#" class="nav-link text-light"><h2>Shoes</h2></a>
-              <li class="nav-item  products"></li>
-              <a href="#" class="nav-link text-light"><h2>Slippers</h2></a>
-            </ul>
-            <ul class="navbar-nav me-auto text-center">
-              <li class="nav-item bg-primary products"></li>
               <a href="#" class="nav-link text-dark"><h2>Categories</h2></a>
-              <li class="nav-item  products"></li>
-              <a href="#" class="nav-link text-light"><h2>nike</h2></a>
-              <li class="nav-item  products"></li>
-              <a href="#" class="nav-link text-light"><h2>puma</h2></a>
+              
+              <?php
+              $select_categories="select * from `categories`";
+              $result_categories=mysqli_query($con,$select_categories);
+              while($row_data=mysqli_fetch_assoc($result_categories)){
+                $categories_title=$row_data['category_title'];
+                $categories_id=$row_data['category_id'];
+                echo "<li class='nav-items'>
+                <a href='#' class='nav-link text-light'><h3>$categories_title</h3></a>
+                <li>";
+
+          
+
+              }
+              ?>
               
             </ul>
+            <ul class="navbar-nav me-auto text-center">
+  <li class="nav-item bg-primary products"></li>
+  <a href="#" class="nav-link text-dark"><h2>Brands</h2></a>
+  
+  <?php
+  $select_brand = "select * from `brand`";
+  $result_brand = mysqli_query($con, $select_brand);
+  while ($row_data = mysqli_fetch_assoc($result_brand)) {
+    $brand_title = $row_data['brand_title'];
+    $brand_id = $row_data['brand_id'];
+    echo "<li class='nav-items'>
+            <a href='#' class='nav-link text-light'><h3>$brand_title</h3></a>
+          </li>";
+  }
+  ?>
+</ul>
+
           </div>
 
 
