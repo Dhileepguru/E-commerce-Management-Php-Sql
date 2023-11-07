@@ -1,3 +1,5 @@
+
+
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -28,15 +30,13 @@
             padding:5px;
         }
         #logoutButton{
-            margin-left:700px;
+            margin-left:50px;
             margin-top:50px;
         }
         .container{
             margin:100px;
             margin-left:5px;
-            border-style:solid;
-            border-color:black;
-            border-radius:10px;
+            
         }
         .btn1{
             margin-left:10px;
@@ -54,8 +54,8 @@
 
 button {
     display: inline-block;
-    margin: 0 10px; /* Adjust margin to control spacing between buttons */
-    padding: 5px 10px; /* Adjust padding for button size */
+    margin: 0 10px; 
+    padding: 5px 10px; 
 }
 
     </style>

@@ -1,27 +1,4 @@
-<?php
-if(!isset($_POST['submit']))
-{
-    $username=$_POST['username'];
-    $password=$_POST['password'];
-    
 
-    $con = mysqli_connect("localhost", "root","", "movie");
-
-    if (!$con) {
-        die("Connection failed: " . mysqli_connect_error());
-    }
-    $sql="SELECT * from login WHERE username='$username' AND
-    password='$password' ";
-    $result=mysqli_query($con,$sql);
-    $resultcheck=mysqli_num_rows($result);
-    if ($resultcheck > 0) {
-        
-        //echo '<script>alert("Logged in successfully!");</script>';
-    } else {
-        echo "Username or password is wrong";
-    }
-}
-?>
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -84,6 +61,9 @@ if(!isset($_POST['submit']))
         </li>
         <li class="nav-item">
           <a class="nav-link" href="#">Cart<sup>1</sup></a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link" href="index2.php">Admins</a>
         </li>
        
       </ul>
@@ -245,37 +225,7 @@ if(!isset($_POST['submit']))
     
 
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-  
-    <div class="bg-grey p-3 text-center">
+<div class="bg-grey p-3 text-center">
         <p> All Rights Reserved © Copyright Designed by Dhileep-2023</p>
   
     <script>
