@@ -65,7 +65,7 @@
           <a class="nav-link" href="#">Cart<sup>1</sup></a>
         </li>
         <li class="nav-item">
-          <a class="nav-link" href="index2.php">Admins</a>
+          <a class="nav-link" href="index.php">Admins</a>
         </li>
        
       </ul>

@@ -8,13 +8,15 @@
     <title>E-commerce</title>
     <style>
       body {
-    background-image: url(/assets/images/bg.jpg);    
+    background-image: url(assets/images/BG5.jpg); 
+    background-size: cover;  
     font-family: 'Asap', sans-serif;
   }
   
   .login {
     overflow: hidden;
     background-color: white;
+
     padding: 40px 30px 30px 30px;
     border-radius: 10px;
     position: absolute;
@@ -42,14 +44,14 @@
   .login::before {
     left: 40%;
     bottom: -130%;
-    background-color:black;
+    background-color:lightgreen;
     animation: wawes 6s infinite linear;
   }
   
   .login::after {
     left: 35%;
     bottom: -125%;
-    background-color: rgba(2, 128, 144, 0.2);
+    background-color: black;
     animation: wawes 7s infinite;
   }
   
@@ -58,7 +60,7 @@
     display: block;
     border-radius: 5px;
     font-size: 16px;
-    background: white;
+    
     width: 100%;
     border: 0;
     padding: 10px 10px;
@@ -68,7 +70,7 @@
   .login > button {
     font-family: 'Asap', sans-serif;
     cursor: pointer;
-    color: #fff;
+    color: white;
     font-size: 16px;
     text-transform: uppercase;
     width: 80px;
@@ -106,7 +108,7 @@
     </style>
   </head>
   <body>
-    <form method="POST" action="logincheck.php" class="login">
+    <form method="POST" action="index2.php" class="login">
         <label for="username">Username</label>
         <input type="text" name="username" />
         <label for="password">Password</label>
