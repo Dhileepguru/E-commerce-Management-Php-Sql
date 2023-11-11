@@ -114,7 +114,7 @@
     }
 
     html {
-        background: url(/assets/images/bg.jpg);
+        background: url(./assets/images/bg.png);
         background-size: cover;
         background-repeat: no-repeat;
         background-attachment: fixed;
@@ -134,13 +134,32 @@
         text-decoration: none;
         
     }
+    
+    footer {
+           
+            color: white; /* Text color */
+            padding: 20px;
+            text-align: center;
+            position: fixed;
+            bottom: 0;
+            width: 100%;
+        }
+
+        footer a {
+            color: white; /* Link color */
+            text-decoration: none;
+        }
+
+        footer a:hover {
+            text-decoration: underline;
+        }
    </style>
 </head>
 <body>
 <div class="head">
     <nav>
        
-        <img src="assets/images/logo2.jpg" class="im"/>
+        <img src="assets/images/logomain.png" class="im"/>
         <ul nav class="nav_item">
             <li class="nav_item">
                 <a href="#" class="nav_link">Products</a>
@@ -156,7 +175,7 @@
 <br>
 <br>
 <div class="container">
-    <form id="myform">
+    <form id="myform" action="logincheck.php" method="post">
         <div class="contents">
             <h1>Welcome to Shopify <br> Login</h1><br>
             <input type="text" class="name" placeholder="Enter your Name" required><p></p>
@@ -165,11 +184,9 @@
         </div>
     </form>
 </div>
+
 <footer>
-    <a href="" class="footer">
-        <p> All Rights Reserved © Copyright Designed by Dhileep-2023</p>
-    </a>
-    
+    <p>&copy; 2023 Shopify | <a href="#">Privacy Policy</a> | <a href="#">Terms of Service</a></p>
 </footer>
 
 </body>
