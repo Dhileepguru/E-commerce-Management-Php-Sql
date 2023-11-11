@@ -1,25 +1,40 @@
 <?php
-  include('connect.php');
-  if(isset($_POST['insert_product'])){
+include('connect.php');
 
-    $product_title=$_POST['productTitle'];
-    $product_Description=$_POST['productDescription'];
-    $product_Keywords=$_POST['productKeywords'];
-    $product_Category=$_POST['productCategory'];
-    $product_brand=$_POST['productBrand'];
-    $product_price=$_POST['productPrice'];
+if (isset($_POST['insert_product'])) {
+    $product_title = $_POST['productTitle'];
+    $product_Description = $_POST['productDescription'];
+    $product_Keywords = $_POST['productKeywords'];
+    $product_Category = $_POST['productCategory'];
+    $product_brand = $_POST['productBrand'];
+    $product_price = $_POST['productPrice'];
+    $product_status = 'true';
 
-    $product_image1=$_POST['productImage1']['name'];
-    $product_image2=$_POST['productImage2']['name'];
-    $product_image3=$_POST['productImage3']['name'];
+    $product_image1 = $_FILES['productImage1']['name'];
+    $product_image2 = $_FILES['productImage2']['name'];
+    $product_image3 = $_FILES['productImage3']['name'];
 
-    $product_image1=$_POST['productImage1']['tmp_name'];
-    $product_image2=$_POST['productImage2']['tmp_name'];
-    $product_image3=$_POST['productImage3']['tmp_name'];
+    $temp_image1 = $_FILES['productImage1']['tmp_name'];
+    $temp_image2 = $_FILES['productImage2']['tmp_name'];
+    $temp_image3 = $_FILES['productImage3']['tmp_name'];
 
-  }
+    if (empty($product_title) || empty($product_Description) || empty($product_Keywords) || empty($product_Category) || empty($product_brand) || empty($product_price) || empty($product_image1) || empty($product_image2) || empty($product_image3)) {
+        echo "<script> alert('Please fill in all the fields')</script>";
+        exit();
+    } else {
+        move_uploaded_file($temp_image1, "./assets/product_images$product_image1");
+        move_uploaded_file($temp_image2, "./assets/product_images$product_image2");
+        move_uploaded_file($temp_image3, "./assets/product_images$product_image3");
+
+        $insert_products = "INSERT INTO `products` (product_title, product_description, product_keywords, category_id, brand_id, product_image1, product_image2, product_image3, product_price, date, status) VALUES ('$product_title', '$product_Description', '$product_Keywords', '$product_Category', '$product_brand', '$product_image1', '$product_image2', '$product_image3', '$product_price', NOW(), '$product_status')";
 
 
+        $result_query = mysqli_query($con, $insert_products);
+        if ($result_query) {
+            echo "<script> alert('Successfully filled the products')</script>";
+        }
+    }
+}
 ?>
 <!DOCTYPE html>
 <html lang="en">
@@ -85,8 +100,8 @@
                     $result_query=mysqli_query($con,$select_query);
                     while($row=mysqli_fetch_assoc($result_query)){
                         $brand_title=$row['brand_title'];
-                        $category_id=$row['brand_title'];
-                        echo "<option value=''>$category_title</option>";
+                        $brand_id=$row['brand_title'];
+                        echo "<option value='$brand_id'>$brand_title</option>";
                     }
                 ?>
                 <option value="">Select a brand</option>

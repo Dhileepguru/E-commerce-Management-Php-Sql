@@ -96,7 +96,7 @@ button {
         <a href="" class="nav-link">View Products</a>
     </button>
     <button>
-        <a href="" class="nav-link">Insert Products</a>
+        <a href="insertproduct.php" class="nav-link">Insert Products</a>
     </button>
     <button>
         <a href="" class="nav-link">View Categories</a>
